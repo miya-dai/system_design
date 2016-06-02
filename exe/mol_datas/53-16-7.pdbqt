@@ -1,0 +1,29 @@
+REMARK  1 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_17  and  O_18 
+ROOT
+HETATM    1  C   LIG     1      -2.860   1.714  -0.632  1.00  0.00     0.024 C 
+HETATM    2  C   LIG     1      -2.477   0.548   0.307  1.00  0.00     0.021 C 
+HETATM    3  C   LIG     1      -1.618   1.055   1.494  1.00  0.00     0.018 C 
+HETATM    4  C   LIG     1      -0.195   1.486   1.074  1.00  0.00     0.011 C 
+HETATM    5  C   LIG     1       0.387   0.670  -0.115  1.00  0.00     0.024 C 
+HETATM    6  C   LIG     1       1.912   0.625  -0.096  1.00  0.00    -0.047 A 
+HETATM    7  C   LIG     1       2.622  -0.565  -0.405  1.00  0.00    -0.049 A 
+HETATM    8  C   LIG     1       1.908  -1.859  -0.712  1.00  0.00     0.039 C 
+HETATM    9  C   LIG     1       0.466  -1.629  -1.167  1.00  0.00     0.010 C 
+HETATM   10  C   LIG     1      -0.257  -0.734  -0.152  1.00  0.00    -0.000 C 
+HETATM   11  C   LIG     1      -1.777  -0.613  -0.467  1.00  0.00     0.006 C 
+HETATM   12  C   LIG     1      -2.541  -1.913  -0.122  1.00  0.00     0.013 C 
+HETATM   13  C   LIG     1      -3.880  -1.519   0.487  1.00  0.00     0.079 C 
+HETATM   14  C   LIG     1      -3.729  -0.086   0.823  1.00  0.00     0.135 C 
+HETATM   15  O   LIG     1      -4.574   0.526   1.460  1.00  0.00    -0.297 OA
+HETATM   16  C   LIG     1       4.026  -0.560  -0.393  1.00  0.00     0.044 A 
+HETATM   17  C   LIG     1       4.732   0.620  -0.137  1.00  0.00     0.066 A 
+HETATM   18  C   LIG     1       4.037   1.804   0.107  1.00  0.00     0.037 A 
+HETATM   19  C   LIG     1       2.641   1.811   0.116  1.00  0.00     0.011 A 
+ENDROOT
+BRANCH  17  20
+HETATM   20  O   LIG     1       6.125   0.628  -0.132  1.00  0.00    -0.361 OA
+HETATM   21  H   LIG     1       6.661  -0.214  -0.308  1.00  0.00     0.217 HD
+ENDBRANCH  17  20
+TORSDOF 1

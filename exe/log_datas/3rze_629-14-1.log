@@ -1,0 +1,45 @@
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, Journal of Computational Chemistry 31 (2010)  #
+# 455-461                                                       #
+#                                                               #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see http://vina.scripps.edu for more information.      #
+#################################################################
+
+Output will be mol_datas/629-14-1_out.pdbqt
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1000
+Performing search ... done.
+Refining results ... done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.2      0.000      0.000
+   2         -4.2      0.865      3.767
+   3         -4.2      2.373      3.116
+   4         -4.2      1.980      4.304
+   5         -3.6      1.157      1.595
+   6         -3.6      4.195      5.172
+   7         -3.5      3.059      4.746
+   8         -3.5      2.495      3.694
+   9         -3.5      8.060     10.470
+  10         -3.5      7.063      8.922
+  11         -3.5      5.828      8.375
+  12         -3.5      4.102      5.207
+  13         -3.4      9.193     11.160
+  14         -3.4      8.720     10.108
+  15         -3.4      2.721      4.339
+  16         -3.4      8.100      9.974
+  17         -3.4      9.267     11.040
+  18         -3.3     11.221     12.112
+  19         -3.3      2.864      4.297
+Writing output ... done.

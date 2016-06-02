@@ -1,0 +1,46 @@
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, Journal of Computational Chemistry 31 (2010)  #
+# 455-461                                                       #
+#                                                               #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see http://vina.scripps.edu for more information.      #
+#################################################################
+
+Output will be mol_datas/111-43-3_out.pdbqt
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1000
+Performing search ... done.
+Refining results ... done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.4      0.000      0.000
+   2         -4.4      0.173      3.394
+   3         -4.3      1.342      1.647
+   4         -4.0      1.886      2.580
+   5         -3.9      1.500      4.118
+   6         -3.8      2.876      3.707
+   7         -3.7      1.487      2.082
+   8         -3.7      2.931      4.401
+   9         -3.6      1.556      4.205
+  10         -3.6      2.407      3.649
+  11         -3.5      2.927      4.018
+  12         -3.5      8.401     10.623
+  13         -3.3      3.198      4.069
+  14         -3.3     10.760     11.924
+  15         -3.2     12.491     13.518
+  16         -3.2      9.504     10.559
+  17         -3.1      7.614      9.866
+  18         -3.1     10.965     12.004
+  19         -3.0     12.726     13.610
+  20         -2.7     15.175     16.168
+Writing output ... done.

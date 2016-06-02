@@ -1,0 +1,40 @@
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_2  and  C_3 
+REMARK    2  A    between atoms: C_2  and  C_7 
+REMARK    3  A    between atoms: C_7  and  N_8 
+REMARK    4  A    between atoms: C_7  and  O_13 
+REMARK    5  A    between atoms: O_13  and  C_14 
+ROOT
+HETATM    1  C   LIG     1      -0.197   0.201   0.026  1.00  0.00     0.324 C 
+ENDROOT
+BRANCH   1   2
+HETATM    2  C   LIG     1      -1.407   0.277   0.930  1.00  0.00     0.184 C 
+HETATM    3  O   LIG     1      -1.375   1.062   1.869  1.00  0.00    -0.292 OA
+BRANCH   2   4
+HETATM    4  C   LIG     1      -2.641  -0.601   0.708  1.00  0.00     0.014 C 
+HETATM    5  C   LIG     1      -2.258  -2.086   0.867  1.00  0.00     0.023 C 
+HETATM    6  C   LIG     1      -3.211  -0.357  -0.705  1.00  0.00     0.023 C 
+HETATM    7  C   LIG     1      -3.743  -0.268   1.740  1.00  0.00     0.023 C 
+ENDBRANCH   2   4
+ENDBRANCH   1   2
+BRANCH   1   8
+HETATM    8  N   LIG     1      -0.036   1.470  -0.684  1.00  0.00    -0.225 N 
+HETATM    9  C   LIG     1       0.455   2.622  -0.196  1.00  0.00     0.233 A 
+HETATM   10  N   LIG     1       0.424   3.596  -1.126  1.00  0.00    -0.234 NA
+HETATM   11  C   LIG     1      -0.117   2.964  -2.191  1.00  0.00     0.256 A 
+HETATM   12  N   LIG     1      -0.405   1.674  -1.935  1.00  0.00    -0.162 NA
+ENDBRANCH   1   8
+BRANCH   1  13
+HETATM   13  O   LIG     1       0.959  -0.076   0.819  1.00  0.00    -0.317 OA
+BRANCH  13  14
+HETATM   14  C   LIG     1       2.243  -0.338   0.313  1.00  0.00     0.072 A 
+HETATM   15  C   LIG     1       3.288  -0.524   1.226  1.00  0.00     0.038 A 
+HETATM   16  C   LIG     1       4.586  -0.784   0.776  1.00  0.00     0.026 A 
+HETATM   17  C   LIG     1       4.850  -0.862  -0.594  1.00  0.00     0.034 A 
+HETATM   18  C   LIG     1       3.813  -0.681  -1.515  1.00  0.00     0.026 A 
+HETATM   19 CL   LIG     1       6.479  -1.188  -1.158  1.00  0.00    -0.084 Cl
+HETATM   20  C   LIG     1       2.514  -0.421  -1.067  1.00  0.00     0.038 A 
+ENDBRANCH  13  14
+ENDBRANCH   1  13
+TORSDOF 5

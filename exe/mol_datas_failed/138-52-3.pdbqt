@@ -1,0 +1,37 @@
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C_5  and  C_6 
+REMARK    2  A    between atoms: C_11  and  O_12 
+REMARK    3  A    between atoms: O_12  and  C_13 
+REMARK    4  A    between atoms: C_18  and  C_19 
+ROOT
+HETATM    1  O   LIG     1      -1.913   2.432   1.227  1.00  0.00    -0.215 OA
+HETATM    2  C   LIG     1      -1.043   1.344   1.040  1.00  0.00     0.241 C 
+HETATM    3  C   LIG     1      -1.811   0.021   1.204  1.00  0.00     0.220 C 
+HETATM    4  C   LIG     1      -2.771  -0.190   0.016  1.00  0.00     0.215 C 
+HETATM    5  C   LIG     1      -2.011  -0.006  -1.319  1.00  0.00     0.184 C 
+HETATM    6  O   LIG     1      -1.409   1.279  -1.373  1.00  0.00    -0.326 OA
+HETATM    7  O   LIG     1      -3.338  -1.474   0.080  1.00  0.00    -0.218 OA
+HETATM    8  O   LIG     1      -0.894  -1.041   1.293  1.00  0.00    -0.218 OA
+HETATM    9  C   LIG     1      -0.419   1.442  -0.371  1.00  0.00     0.274 C 
+ENDROOT
+BRANCH   9  10
+HETATM   10  O   LIG     1       0.639   0.493  -0.559  1.00  0.00    -0.304 OA
+BRANCH  10  11
+HETATM   11  C   LIG     1       1.897   0.514   0.067  1.00  0.00     0.095 A 
+HETATM   12  C   LIG     1       2.343   1.617   0.824  1.00  0.00     0.024 A 
+HETATM   13  C   LIG     1       3.596   1.591   1.441  1.00  0.00     0.002 A 
+HETATM   14  C   LIG     1       4.417   0.471   1.313  1.00  0.00    -0.000 A 
+HETATM   15  C   LIG     1       3.993  -0.625   0.559  1.00  0.00     0.000 A 
+HETATM   16  C   LIG     1       2.742  -0.606  -0.080  1.00  0.00     0.033 A 
+BRANCH  16  17
+HETATM   17  C   LIG     1       2.291  -1.808  -0.870  1.00  0.00     0.211 C 
+HETATM   18  O   LIG     1       1.380  -2.565  -0.121  1.00  0.00    -0.215 OA
+ENDBRANCH  16  17
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+BRANCH   5  19
+HETATM   19  C   LIG     1      -2.959  -0.130  -2.525  1.00  0.00     0.214 C 
+HETATM   20  O   LIG     1      -3.447  -1.438  -2.659  1.00  0.00    -0.218 OA
+ENDBRANCH   5  19
+TORSDOF 4
