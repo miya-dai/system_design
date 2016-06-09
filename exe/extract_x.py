@@ -1,6 +1,9 @@
 import pandas as pd
+import sys
 
-y_data = open ("logS_data_set_2D_selected.sdf", "r")
+inputfilename = sys.argv[1]
+
+y_data = open (inputfilename, "r")
 ori_container = []
 a = 0
 for line in y_data:
