@@ -3,6 +3,8 @@ import pandas as pd
 import sys
 from PEIOPT_for_loop import *
 import csv
+from tqdm import tqdm
+import time
 
 x_all = pd.read_csv("x_all.csv", header=None)
 y_all = pd.read_csv("y_all.csv", header=None)
@@ -39,6 +41,9 @@ for num_of_sample in range(10,51,10):
 		X = np.loadtxt("./x_csvs/x_%i_%i.csv" %(num_of_sample, random_num),delimiter=",")
 		X = X.astype(np.float64)#設計変数
 		ycsv = pd.read_csv("./y_csvs/y_%i_%i.csv" %(num_of_sample, random_num), header=None)
+		add_rand = np.random.rand(len(ycsv)) * np.random.rand(len(ycsv))
+		for i in range(len(ycsv)):
+			ycsv.ix[i,0] = ycsv.ix[i,0] + add_rand[i]
 		y = ycsv.as_matrix()
 		y = y.astype(np.float64)#特性
 		boundcsv = np.loadtxt("bound.csv",delimiter=",")#設計変数のレンジ
@@ -64,7 +69,6 @@ for num_of_sample in range(10,51,10):
 		Xselec = []
 		theta = []
 		result = []
-
 		# 任意の数の候補を選択するまでループ
 		for i in range(0,int(option[1][1])):
 		    # GPモデルの構築
@@ -74,7 +78,8 @@ for num_of_sample in range(10,51,10):
 		            gp = GaussianProcess(thetaL = 0.0000001, thetaU = 100)
 		            Xdb = X[np.isnan(y[:,obj]) == False, :]#yが欠損値の場合は無視
 		            ydb = y[np.isnan(y[:,obj]) == False, obj]#yが欠損値の場合は無視
-		            
+#		            print(Xdb)
+#		            print(ydb)
 		            gp.fit(Xdb, ydb)
 		            gp_list.append(gp)
 		            
@@ -157,6 +162,7 @@ for num_of_sample in range(10,51,10):
 		    else:
 		        result = pd.concat([result,result_temp], axis=0)
 		y_pred_value = pd.Series(result_of_y_pred[0])
+
 		result = pd.concat([result,y_pred_value], axis=1)
 #		print("succeed")
 #		print(cas_source[de_result.id])
@@ -169,10 +175,13 @@ for num_of_sample in range(10,51,10):
 		write_list.append(random_num)
 		write_list.append(cas_source[de_result.id])
 		write_list.append(result_of_y_pred[0][0])
-		write_list.append(y_eval.ix[de_result.id,0])
-		error_value = abs(result_of_y_pred[0][0] - y_eval.ix[de_result.id,0])
+		write_list.append(y_eval.iloc[de_result.id,0])
+#		print(y_eval.ix[de_result.id,0])
+		error_value = abs(result_of_y_pred[0][0] - y_eval.iloc[de_result.id,0])
 		write_list.append(error_value)
 		writer.writerow(write_list)
+	print("succeed")
+
 
 f.close()
 		#結果の出力

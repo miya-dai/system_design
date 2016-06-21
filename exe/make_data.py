@@ -90,11 +90,11 @@ if str(arg[1]) == "csv":
 	y_log_df = del_dup_data(learn_x,learn_y)
 
 	y_log_df.to_csv("y_logS_%d.csv" %num_of_sample, header = None, index = None)
-	learn_x = learn_x.ix[:,2:]
-	test_x = test_x.ix[:,2:]
+	learn_x = learn_x.iloc[:,2:]
+	test_x = test_x.iloc[:,2:]
 	learn_x.to_csv("x_%d.csv" %num_of_sample, header = None, index = None)
 	test_x.to_csv("xeval_%d.csv" %num_of_sample, header = None, index = None)
-	test_x_structure = test_x.ix[:,0:1]
+	test_x_structure = test_x.iloc[:,0:1]
 
 if str(arg[1]) == "sdf":
 	# data to sdf
