@@ -27,11 +27,11 @@ for cas_ID in y_source["str_ID"]:
     str_num_list.sort()
 
 for str_num in str_num_list:
-    x = pd.DataFrame(x_source.ix[str_num,2:])
+    x = pd.DataFrame(x_source.iloc[str_num,2:])
 
 x_list = []
 for str_num in str_num_list:
-    x_list.append(x_source.ix[str_num,2:].values.flatten())
+    x_list.append(x_source.iloc[str_num,2:].values.flatten())
     
 x = pd.DataFrame(x_list)
 x.to_csv("x_all.csv", index=False, header=False)
