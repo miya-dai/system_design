@@ -1,5 +1,6 @@
 #Xに分子のIDを追加できるように改良（Xの1列目を無視する）
 # H.Uratani 2016/6/20
+# H.Uratani 2016/7/6
 
 
 import numpy as np
@@ -74,7 +75,8 @@ class Opt_func:
         return -p
     
     #最適値の更新幅の期待値
-    def EI(self,X):
+    #parameters=Trueにすると予測値と予測値標準偏差も出力
+    def EI(self,X,parameters=False):
         ypred_list = []
         sigma_list = []
         
@@ -114,7 +116,10 @@ class Opt_func:
         self.sigma = sigma_list
         self.ei = ei
         
-        return -ei
+        if parameters is False:
+            return -ei
+        elif parameters is True:
+            return (-ei, ypred_list, sigma_list)
         
     #予測値のみから選択
     def Y(self,X):
@@ -295,6 +300,9 @@ for i in range(0,int(option[1][1])):
         #候補の選択
         de_result = result_cont(Xeval[eval.argmin(),:],eval.argmin())
         
+        #予測値を求める
+        #pred_value = optfunc.Y(de_result)
+        
     #選択された候補を格納
     if i == 0:
         Xselec = de_result.x[:,np.newaxis].T
@@ -314,8 +322,13 @@ for i in range(0,int(option[1][1])):
         eve = optfunc_first.Y(de_result.x[:,np.newaxis].T)
         if optfunc_first.optdirection < 0:
             eve = -eve
-        
+    #予測値と予測値標準偏差
+    mu_sigma = optfunc_first.EI(de_result.x[:,np.newaxis].T, parameters=True)
+    mu = (mu_sigma[1])[0]
+    sigma = (mu_sigma[2])[0]
     result_temp[result_temp.shape[1]] = -eve
+    result_temp[result_temp.shape[1]] = mu
+    result_temp[result_temp.shape[1]] = sigma
     result_temp[result_temp.shape[1]] = "id"
     result_temp[result_temp.shape[1]] = '-' if (int(option[1][4]) == 0) else de_result.id
     
